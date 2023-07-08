@@ -2,23 +2,22 @@
 Senior assignment for Electool Hungary kft.
 
 ```
-Készíts egy alkalmazást Ruby-ban frameworkkel vagy anélkül:
-- Az alkalmazás fogadjon egy lakcímet (határozd meg a formátumot).
-- Kérd le a Google-től vagy más nyilvános API-tól a cím koordinátáit.
-- Számold ki milyen messze van légvonalban az Electool irodájától.
-- Válaszként add vissza el a távolságot, méterben.
-- Teszteld az alkalmazást unit tesztekkel.
-
-A fejlesztéshez használj Git-et és lépésenként commitolj, majd töltsd fel a githubra, vagy Bitbucketre és a repo linkjét küldd el nekem.
+Create an application in Ruby with or without a framework:
+- The application should receive an address (determine the format).
+- Request address coordinates from Google or other public API.
+- Calculate how far you are from the Electool office as the crow flies.
+- Return the distance in meters as an answer.
+- Test the application with unit tests. For development, use Git and commit step by step, then upload it to github or Bitbucket and send me the repo link.
 ```
+
 ## Fejlesztés
 
-A két pont közti távolság Haversine formulával lett számolva, forrás:
+The distance between the two points was calculated using the Haversine formula, source:
 https://stackoverflow.com/questions/12966638/how-to-calculate-the-distance-between-two-gps-coordinates-without-using-google-m
 
-A program futásához szükség van egy geolokációt alkalmazni tudó google API kulcsra.
+To run the program, you need a google API key that can use geolocation.
 Ezt a ".env" fileba kell elhelyezni. A ".env_sample" file tartalmazza a kitöltendő kulcsok nevét.
 
-Az egész telepítési és konfigurálási eljárást lerövidítendő Dockerizáltam az alkamazást.
+To shorten the entire installation and configuration process, I Dockerized the application.
 
-A tesztelést mivel nem tartalmaz modell teszteket ezért endpoint testing-el oldottam meg.
+Since the testing does not include model tests, I solved it with endpoint testing.
